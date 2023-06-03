@@ -15,8 +15,7 @@
   },
   "devDependencies": {
     "@fancyapps/ui": "5.0.14",
-    "sass": "1.59.3",
-    "standard": "17.0.0"
+    "sass": "1.59.3"
   },
   "eslintConfig": {
     "extends": "./node_modules/standard/eslintrc.json"
