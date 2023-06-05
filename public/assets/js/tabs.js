@@ -39,8 +39,8 @@ export function Tabs () {
   tabLinks.forEach(function (tab, i) {
     tab.addEventListener('click', (e) => {
       e.preventDefault()
-      const currentTabList = e.currentTarget.closest("ul[role="tablist"]")
-      const currentTab = currentTabList.querySelector('[aria-selected]')
+      const currentTabList = e.currentTarget.closest('ul[role="tablist"]')
+      const currentTab = currentTabList.querySelector("[aria-selected]")
       if (e.currentTarget !== currentTab) {
         switchTab(currentTab, e.currentTarget)
       }
