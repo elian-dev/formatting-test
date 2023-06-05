@@ -15,9 +15,21 @@
   },
   "devDependencies": {
     "@fancyapps/ui": "5.0.14",
+    "eslint": "^8.42.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "prettier": "^2.8.8",
     "sass": "1.59.3"
   },
   "eslintConfig": {
     "extends": "./node_modules/standard/eslintrc.json"
+  },
+  "lint-staged": {
+    "src/**/*.{astro}": [
+      "prettier --write"
+    ],
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ]
   }
 }
