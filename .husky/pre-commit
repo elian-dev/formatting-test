@@ -1,3 +1,5 @@
+//Then edit the .husky/pre-commit file
+#!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
 npx lint-staged
