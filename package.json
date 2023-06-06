@@ -22,6 +22,7 @@
     "lint-staged": "^13.2.2",
     "prettier": "^2.8.8",
     "prettier-plugin-astro": "^0.10.0",
+    "prettier-standard": "^16.4.1",
     "sass": "1.59.3",
     "standard": "17.0.0",
     "stylelint": "^15.7.0",
@@ -50,16 +51,15 @@
     "rules": {}
   },
   "lint-staged": {
-    "src/**/*.{astro}": [
+    "src/**/*.astro": [
       "prettier --write"
     ],
     "src/**/*.{scss,css,sass}": [
-      "stylelint"
+      "stylelint --fix"
     ],
     "*.{js,jsx,ts,tsx}": [
-      "prettier-standard --lint --staged"
+      "prettier --lint --staged"
     ],
-    "*.css": "stylelint --fix",
-    "*.{js,css,md}": "prettier --write"
+    "*.md": "prettier --write"
   }
 }

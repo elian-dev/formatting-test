@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
    * @see public/assets/js/tabs.js
    * Call the function from tabs.js
   */
-  Tabs()
+  Tabs( )
   /**
    * Accordions
    * @see public/assets/js/accordions.js

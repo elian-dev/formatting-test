@@ -18,21 +18,21 @@
   */
 export function Tabs () {
   const tablist = document.querySelectorAll("ul[role='tablist']")
-  if (!tablist || tablist.length === 0) {
-    return
+  if (!tablist || tablist.length === 0) {  return
   }
   const tabLinks = []
   tablist.forEach((tabListItem) => {
     const tabs = tabListItem.querySelectorAll("li[role='presentation']")
-    tabs.forEach((tabItem) => {
-      const link = tabItem.querySelector("a[role='tab']")
+    tabs.forEach((tabItem) => { const link = tabItem.querySelector("a[role='tab']")
       tabLinks.push(link)
     })
   })
 
   const panels = document.querySelectorAll("section[role='tabpanel']")
 
-  const LEFT_ARROW = 'ArrowLeft'
+  const panels2 = 'PANEL';
+
+  const LEFT_ARROW = "ArrowLeft"
   const RIGHT_ARROW = 'ArrowRight'
   const DOWN_ARROW = 'ArrowDown'
 
