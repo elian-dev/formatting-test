@@ -8,7 +8,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "css:build": "sass src/styles:public/assets/css"
+    "css:build": "sass src/styles:public/assets/css",
+    "prepare": "husky install"
   },
   "dependencies": {
     "astro": "2.1.8"
@@ -17,6 +18,8 @@
     "@fancyapps/ui": "5.0.14",
     "@typescript-eslint/parser": "^5.59.9",
     "eslint-plugin-astro": "^0.27.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
     "prettier": "^2.8.8",
     "prettier-plugin-astro": "^0.10.0",
     "sass": "1.59.3",
@@ -55,6 +58,8 @@
     ],
     "*.{js,jsx,ts,tsx}": [
       "prettier-standard --lint --staged"
-    ]
+    ],
+    "*.css": "stylelint --fix",
+    "*.{js,css,md}": "prettier --write"
   }
 }
