@@ -1,5 +1,4 @@
 .accordion {
-
   &__item_content {
     color: $color-black;
     overflow: hidden;
@@ -29,7 +28,7 @@
     }
   }
 
-  [aria-expanded="true"] {
+  [aria-expanded='true'] {
     background-color: #d5d5d5;
 
     .accordion__item_content {
@@ -58,23 +57,19 @@
     line-height: 1.5588rem;
     text-align: center;
 
-
     &::after {
-      content: "";
+      content: '';
       display: block;
       // Arrow icon
       background-image: url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23000000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
-      margin-top: .5rem;
+      margin-top: 0.5rem;
       margin-right: auto;
       margin-left: auto;
-      height: .8087rem;
+      height: 0.8087rem;
       width: 1.3313rem;
     }
-
-
   }
-
 }

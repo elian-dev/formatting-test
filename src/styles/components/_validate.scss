@@ -1,7 +1,6 @@
 @import '../settings/variables';
 @import '../settings/fonts';
 
-
 .validate__section {
   background-color: #d5d5d5;
   display: grid;
@@ -30,7 +29,7 @@
   margin-top: 1rem;
 }
 
-.validate__section input[type="text"] {
+.validate__section input[type='text'] {
   background-color: $color-white;
   border: 1px solid $color-black;
   border-radius: 5px;
@@ -46,7 +45,7 @@
   width: 100%;
 }
 
-.validate__section input[type="submit"] {
+.validate__section input[type='submit'] {
   background-color: $color-black;
   border: 1px solid $color-black;
   border-radius: 5px;
@@ -65,7 +64,7 @@
   cursor: pointer;
 }
 
-.validate__section input[type="submit"]:hover {
+.validate__section input[type='submit']:hover {
   --hover-color: #222121;
   border-color: var(--hover-color);
   background-color: var(--hover-color);
