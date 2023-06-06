@@ -28,6 +28,9 @@
     "src/**/*.{astro}": [
       "prettier --write"
     ],
+    "src/**/*.scss": [
+      "prettier --write"
+    ],
     "*.{js,jsx,ts,tsx}": [
       "eslint --fix"
     ]
