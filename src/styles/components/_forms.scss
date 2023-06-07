@@ -1,37 +1,43 @@
 input {
   width: 100%;
 
-  &[type="submit"] {
+  &[type='submit'] {
     cursor: pointer;
   }
 
-  &[type="checkbox"],
-  &[type="radio"] {
-    color: currentColor;
-    width: 2rem;
-    height: 2rem;
-    border: 3px solid currentColor;
+  &[type='checkbox'],
+  &[type='radio'] {
     transform: translateY(-0.075em);
 
     display: flex;
+    flex: 0 0 auto;
     align-items: center;
     justify-content: center;
 
-    flex: 0 0 auto;
+    width: 2rem;
+    height: 2rem;
+
+    color: currentcolor;
+
+    border: 3px solid currentcolor;
   }
 
-  &[type="radio"] {
+  &[type='radio'] {
     border-radius: 50%;
 
     &::before {
-      content: "";
+      content: '';
+
+      transform: scale(0);
+
       width: 0.65em;
       height: 0.65em;
-      border-radius: 50%;
-      transform: scale(0);
-      transition: 120ms transform ease-in-out;
-      box-shadow: inset 1em 1em currentColor;
+
       background-color: CanvasText;
+      border-radius: 50%;
+      box-shadow: inset 1em 1em currentcolor;
+
+      transition: 120ms transform ease-in-out;
     }
 
     &:checked::before {
@@ -39,110 +45,114 @@ input {
     }
   }
 
-  &[type="checkbox"] {
-    border-radius: .25rem;
-    -webkit-appearance: none;
+  &[type='checkbox'] {
     position: relative;
+    appearance: none;
+    border-radius: 0.25rem;
 
     &:checked {
-      background-color: currentColor;
-      border-color: currentColor;
+      background-color: currentcolor;
+      border-color: currentcolor;
     }
   }
 }
 
 .form__control {
-  display: block;
   position: relative;
-  padding-bottom: 0;
+
+  display: block;
+
   margin-bottom: 2rem;
+  padding-bottom: 0;
 
   transition: all 100ms ease-in-out;
 
   .form__control-label,
   .form__control-legend {
+    display: inline-block;
+
     font-size: 1rem;
     font-weight: 400;
     line-height: 14px;
     color: $color-black;
-    display: inline-block;
   }
 
   .form__control-legend {
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     line-height: 18px;
   }
 
   .form__control-error {
     position: absolute;
-    display: none;
-    color: $color-red;
-    font-size: 1rem;
-
     top: 101%;
     left: 0;
 
+    display: none;
+
+    font-size: 1rem;
+    color: $color-red;
+
     @media screen and (min-width: 1024px) {
-      font-size: .875rem;
+      font-size: 0.875rem;
     }
   }
 
-  &[data-required="true"] {
-
+  &[data-required='true'] {
     .form__control-label::after,
     .form__control-legend::after {
       content: '*';
-      color: $color-red;
       display: inline-block;
-      margin-left: .25rem;
+      margin-left: 0.25rem;
+      color: $color-red;
     }
   }
 
   .form__control-input {
-    height: 2.9375rem;
-    padding: .625rem 1.875rem;
-    background-color: $color-white;
     width: 100%;
+    height: 2.9375rem;
+    padding: 0.625rem 1.875rem;
 
-    outline: 1px solid $color-black;
-
-    color: $color-black;
     font-size: 1.125rem;
     font-weight: 300;
+    color: $color-black;
+
+    background-color: $color-white;
+    outline: 1px solid $color-black;
 
     &::placeholder {
-      color: $color-black;
       font-size: 1.125rem;
       font-weight: 300;
+      color: $color-black;
     }
   }
 
   .form__control-select-wrapper {
     position: relative;
+
     height: 2.9375rem;
 
-    outline: 1px solid $color-black;
-
-    color: $color-black;
     font-size: 1.125rem;
     font-weight: 300;
+    color: $color-black;
+
+    outline: 1px solid $color-black;
 
     .form__control-select {
       // display: none;
       width: 100%;
       height: 100%;
-      padding: .625rem 2.5rem .625rem 1.875rem;
+      padding: 0.625rem 2.5rem 0.625rem 1.875rem;
 
       &:focus {
-        outline: none;
         border: none;
+        outline: none;
       }
 
       option,
       option:checked {
-        color: $color-black;
         font-size: 1.125rem;
         font-weight: 300;
+        color: $color-black;
       }
     }
   }
@@ -153,23 +163,22 @@ input {
     align-items: center;
 
     &:not(:last-of-type) {
-      margin-bottom: .5rem;
+      margin-bottom: 0.5rem;
     }
 
     input {
-      margin-right: .625rem;
+      margin-right: 0.625rem;
     }
   }
 
   .form__control-checkbox {
-
     align-items: center;
 
     .form__control-label {
+      cursor: pointer;
       font-size: 1rem;
       font-weight: 300;
       line-height: 17.5px;
-      cursor: pointer;
 
       @media screen and (min-width: 768px) {
         font-size: 1.125rem;
@@ -178,8 +187,7 @@ input {
   }
 
   &.form__control--invalid {
-    &[data-touched="true"][data-required="true"][data-is-valid="false"] {
-
+    &[data-touched='true'][data-required='true'][data-is-valid='false'] {
       .form__control-label {
         color: $color-red;
       }
